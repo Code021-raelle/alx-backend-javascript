@@ -1,0 +1,14 @@
+// Display the welcome message
+console.log('Welcome to Holberton School, what is your name?');
+
+// Capture user input
+process.stdin.on('data', (data) => {
+  const name = data.toString().trim();
+  console.log(`Your name is: ${name}`);
+  process.exit();
+});
+
+// Handle program exit
+process.on('exit', () => {
+  console.log('This important software is now closing');
+});
